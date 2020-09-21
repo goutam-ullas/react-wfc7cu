@@ -630,6 +630,7 @@ class Application extends React.Component {
           >
             <text className="themeDesc">{this.theme1Desc}</text>
           </div>
+          {/*Theme 1 Video*/}
           <ReactPlayer
             className="video"
             style={{
