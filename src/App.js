@@ -1082,16 +1082,14 @@ class Application extends React.Component {
             {/*Legend Gods*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
                 className="legendDot"
                 style={{ background: this.godsColor}}
               />
-              <p style={{ textAlign: "center", position: "inline", verticalAlign: "middle" }}>
+              <p style={{position: "inline-block"}}>
                 Place of Worship; # Stores: 50; Commonly Sold:
                 Religion
               </p>
@@ -1099,9 +1097,7 @@ class Application extends React.Component {
             {/*Legend Gods Stores*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1116,9 +1112,7 @@ class Application extends React.Component {
             {/*Legend Gods Beauty & Wedding*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1133,9 +1127,7 @@ class Application extends React.Component {
             {/*Legend Gods Kitchen Utensils*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1150,9 +1142,7 @@ class Application extends React.Component {
             {/*Legend Grocery*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1166,9 +1156,7 @@ class Application extends React.Component {
             {/*Legend Toys*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1183,9 +1171,7 @@ class Application extends React.Component {
             {/*Legend Plastic Goods*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1200,9 +1186,7 @@ class Application extends React.Component {
             {/*Legend Restaurant*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
@@ -1217,9 +1201,7 @@ class Application extends React.Component {
             {/*Legend Bars & Liquor*/}
             <div
               style={{
-                display: "inline-block",
-                marginLeft: 10,
-                verticalAlign: "top"
+                marginLeft: 10
               }}
             >
               <span
