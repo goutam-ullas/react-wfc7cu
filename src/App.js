@@ -512,6 +512,8 @@ class Application extends React.Component {
       aboutState: true,
       legendWidth: 0,
       legendState: false,
+      researchWidth: 0,
+      researchState: false,
       popUpH: 0,
       popUpW: 0,
       pointName: "",
