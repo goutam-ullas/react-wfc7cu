@@ -1118,7 +1118,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Religious Good; # Stores: 50; Commonly Sold: Idols, Incense,
+                Religious Goods; # Stores: 50; Commonly Sold: Idols, Incense,
                 Vermillon
               </p>
             </div>
