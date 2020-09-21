@@ -1070,7 +1070,7 @@ class Application extends React.Component {
           >
             &#10005;
           </span>
-          {/*Legend Window - Content Div*/}
+          {/*Legend Window - Content Div Left*/}
           <div
             style={{
               marginTop: 50,
@@ -1083,17 +1083,16 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
             >
               <span
                 className="legendDot"
-                style={{ background: this.godsColor }}
+                style={{ background: this.godsColor}}
               />
-              <p style={{ textAlign: "left" }}>
-                Place of Worship <br /> # Stores: 50 <br /> Commonly Sold:
+              <p style={{ textAlign: "center", position: "inline", verticalAlign: "middle" }}>
+                Place of Worship; # Stores: 50; Commonly Sold:
                 Religion
               </p>
             </div>
@@ -1101,7 +1100,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1111,7 +1109,7 @@ class Application extends React.Component {
                 style={{ background: this.godsStoreColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Religious Good <br /> # Stores: 50 <br /> Commonly Sold: Idols,
+                Religious Good; # Stores: 50; Commonly Sold: Idols,
                 Incense, Vermillon
               </p>
             </div>
@@ -1119,7 +1117,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1129,7 +1126,7 @@ class Application extends React.Component {
                 style={{ background: this.bnwColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Beauty & Wedding <br /> # Stores: 50 <br /> Commonly Sold:
+                Beauty & Wedding; # Stores: 50; Commonly Sold:
                 Bangles, Jewelry, Cosmetics, Bridal wear
               </p>
             </div>
@@ -1137,7 +1134,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1147,7 +1143,7 @@ class Application extends React.Component {
                 style={{ background: this.kitchenColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Kitchen Utensils <br /> # Stores: 50 <br /> Commonly Sold: Pots,
+                Kitchen Utensils; # Stores: 50; Commonly Sold: Pots,
                 Pans, Ladles, Crockery
               </p>
             </div>
@@ -1155,7 +1151,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1165,14 +1160,13 @@ class Application extends React.Component {
                 style={{ background: this.groceryColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Grocery <br /> # Stores: 50 <br /> Commonly Sold: Grains, Spices
+                Grocery; # Stores: 50; Commonly Sold: Grains, Spices
               </p>
             </div>
             {/*Legend Toys*/}
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1182,7 +1176,7 @@ class Application extends React.Component {
                 style={{ background: this.toysColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Toys <br /> # Stores: 50 <br /> Commonly Sold: Dolls, Bikes,
+                Toys; # Stores: 50; Commonly Sold: Dolls, Bikes,
                 Stuffed animals
               </p>
             </div>
@@ -1190,7 +1184,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1200,7 +1193,7 @@ class Application extends React.Component {
                 style={{ background: this.plasticColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Plastic Goods <br /> # Stores: 50 <br /> Commonly Sold: Mops,
+                Plastic Goods; # Stores: 50; Commonly Sold: Mops,
                 Buckets, Diapers
               </p>
             </div>
@@ -1208,7 +1201,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1218,7 +1210,7 @@ class Application extends React.Component {
                 style={{ background: this.restoColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Restaurant <br /> # Stores: 50 <br /> Commonly Sold: Meals &
+                Restaurant; # Stores: 50; Commonly Sold: Meals &
                 snacks
               </p>
             </div>
@@ -1226,7 +1218,6 @@ class Application extends React.Component {
             <div
               style={{
                 display: "inline-block",
-                width: 150,
                 marginLeft: 10,
                 verticalAlign: "top"
               }}
@@ -1236,7 +1227,7 @@ class Application extends React.Component {
                 style={{ background: this.barsColor }}
               />
               <p style={{ textAlign: "left" }}>
-                Bar & Liquor <br /> # Stores: 50 <br /> Commonly Sold: Alcholic
+                Bar & Liquor; # Stores: 50; Commonly Sold: Alcholic
                 beverages
               </p>
             </div>
