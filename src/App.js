@@ -62,7 +62,14 @@ class Application extends React.Component {
       popUpPad: 0,
       popUpColor: "",
       scaleDistance: 13,
-      videoPlaying: false
+      videoPlaying1: false,
+      videoPlaying2: false,
+      videoPlaying3: false,
+      videoPlaying4: false,
+      videoPlaying5: false,
+      videoPlaying6: false,
+      videoPlaying7: false,
+      videoPlaying8: false
     };
     /*Bind Functions*/
     this.researchRef = React.createRef();
@@ -111,6 +118,7 @@ class Application extends React.Component {
   plasticColor = "#8f7f56";
   barsColor = "#57858e";
   /* Theme Position Variables*/
+  prevCircleState = 0;
   circleState = 0;
   maxThemes = 8;
   /*On Mount*/
@@ -392,8 +400,20 @@ class Application extends React.Component {
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
       if (currentScrollPos >= this.state.themeGap * i * 1.3) {
+        this.prevCircleState = this.circleState;
         this.circleState = i;
-        this.setState({videoPlaying:false})
+        if (this.circleState != this.prevCircleState) {
+          this.setState({
+            videoPlaying1: false,
+            videoPlaying2: false,
+            videoPlaying3: false,
+            videoPlaying4: false,
+            videoPlaying5: false,
+            videoPlaying6: false,
+            videoPlaying7: false,
+            videoPlaying8: false
+          });
+        }
         break;
       }
     }
@@ -622,9 +642,21 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme1Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
-            playing={this.state.videoPlaying}
+            onPlay={() =>
+              this.setState({
+                videoDimX1: 1.25,
+                videoZindex1: 10,
+                videoPlaying1: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX1: 1,
+                videoZindex1: 1,
+                videoPlaying1: false
+              })
+            }
+            playing={this.state.videoPlaying1}
           />
         </div>
         {/*Theme 2*/}
