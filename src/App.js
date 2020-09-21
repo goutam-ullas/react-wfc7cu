@@ -1040,13 +1040,15 @@ class Application extends React.Component {
           </span>
         </div>
         {/*Map Scale Top Right*/}
+        <div>
         <span className="mapScaleMain" />
         <span className="mapScaleSide" style={{ right: 25 }} />
         <span className="mapScaleSide" style={{ right: 145 }} />
-        <text className="mapScaleNumber" style={{ right: 45 }}>
-          {" "}
+        <text className="mapScaleNumber" style={{ right: 48 }}>
+          <br/>
           {this.state.scaleDistance} meter
         </text>
+        </div>
         {/*About Window*/}
         <div
           className="about"
