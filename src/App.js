@@ -511,8 +511,6 @@ class Application extends React.Component {
     this.setState({
       aboutWidth: 0,
       aboutState: true,
-      legendWidth: 0,
-      legendState: true,
       researchWidth: 0,
       researchState: true,
       popUpH: 0,
