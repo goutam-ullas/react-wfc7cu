@@ -1104,7 +1104,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10
+                marginTop: -17
               }}
             >
               <span
@@ -1126,7 +1126,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10
+                marginTop: -17
               }}
             >
               <span
@@ -1148,7 +1148,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10
+                marginTop: -17
               }}
             >
               <span
@@ -1170,7 +1170,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10
+                marginTop: -17
               }}
             >
               <span
@@ -1223,7 +1223,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10
+                marginTop: -17
               }}
             >
               <span
@@ -1245,7 +1245,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10                
+                marginTop: -17                
               }}
             >
               <span
@@ -1266,7 +1266,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -10
+                marginTop: -17
               }}
             >
               <span
