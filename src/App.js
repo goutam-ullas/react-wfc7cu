@@ -380,7 +380,7 @@ class Application extends React.Component {
     window.addEventListener("mousedown", this.handleAboutResearchClick);
 
     /* set circle state to current scroll position on scroll */
-    window.addEventListener("scroll", this.setCircleState);
+    window.addEventListener("onscroll", this.setCircleState);
   }
   /* set circle state to current scroll position on scroll */
   setCircleState() {
