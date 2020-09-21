@@ -1103,7 +1103,8 @@ class Application extends React.Component {
             {/*Legend Gods Stores*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10
               }}
             >
               <span
@@ -1124,7 +1125,8 @@ class Application extends React.Component {
             {/*Legend Gods Beauty & Wedding*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10
               }}
             >
               <span
@@ -1145,7 +1147,8 @@ class Application extends React.Component {
             {/*Legend Gods Kitchen Utensils*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10
               }}
             >
               <span
@@ -1166,7 +1169,8 @@ class Application extends React.Component {
             {/*Legend Grocery*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10
               }}
             >
               <span
@@ -1218,7 +1222,8 @@ class Application extends React.Component {
             {/*Legend Plastic Goods*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10
               }}
             >
               <span
@@ -1239,7 +1244,8 @@ class Application extends React.Component {
             {/*Legend Restaurant*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10                
               }}
             >
               <span
@@ -1259,7 +1265,8 @@ class Application extends React.Component {
             {/*Legend Bars & Liquor*/}
             <div
               style={{
-                marginLeft: 10
+                marginLeft: 10,
+                marginTop: -10
               }}
             >
               <span
