@@ -510,8 +510,8 @@ class Application extends React.Component {
     if (this.circleState == 0) {
       window.scrollTo(0, 0);
     } else {
-      window.scrollBy({
-        top: this.state.themeGap * 1.52,
+      window.scrollTo({
+        top: this.state.themeGap * this.circleState * 1.52,
         left: 0,
         behavior: "smooth"
       });
