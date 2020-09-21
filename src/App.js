@@ -695,8 +695,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme2Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10,videoPlaying2:true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1,videoPlaying2: false })}
+            playing={this.state.videoPlaying2}
           />
         </div>
         {/*Theme 3*/}
@@ -735,8 +736,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme3Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10, videoPlaying3:true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1, videoPlaying3:false })}
+            playing={this.state.videoPlaying3}
           />
         </div>
         {/*Theme 4*/}
@@ -775,8 +777,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme4Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10, videoPlaying4:true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1, videoPlaying4: false })}
+            playing={this.state.videoPlaying4}
           />
         </div>
         {/*Theme 5*/}
@@ -815,8 +818,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme5Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10, videoPlaying5: true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1, videoPlaying5: false })}
+            playing={this.state.videoPlaying5}
           />
         </div>
         {/*Theme 6*/}
@@ -855,8 +859,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme6Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10, videoPlaying6: true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1, videoPlaying6: false })}
+            playing={this.state.videoPlaying6}
           />
         </div>
         {/*Theme 7*/}
@@ -895,8 +900,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme7Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10, videoPlaying7:true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1, videoPlaying7:false })}
+            playing={this.state.videoPlaying7}
           />
         </div>
         {/*Theme 8*/}
@@ -935,8 +941,9 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme8Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
-            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10, videoPlaying8:true })}
+            onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1, videoPlaying8: false })}
+            playing={this.state.videoPlaying8}
           />
         </div>
         {/*End of Themes Buffer*/}
