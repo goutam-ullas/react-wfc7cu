@@ -86,7 +86,7 @@ class Application extends React.Component {
     this.theme3Desc =
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
   }
-/* Video URLs*/
+  /* Video URLs*/
   theme1Video = "https://vimeo.com/448631749/8c1e28fe46";
   theme2Video = "https://vimeo.com/448630508/11ec6d4d54";
   theme3Video = "https://vimeo.com/448632066/2ab228f98c";
@@ -96,7 +96,6 @@ class Application extends React.Component {
   theme7Video = "https://vimeo.com/448631543/98f339b864";
   theme8Video = "https://vimeo.com/448630300/810e46cfce";
   theme9Video = "https://vimeo.com/448630508/11ec6d4d54";
-
 
   /* Legend colors */
   godsColor = "#79859a";
@@ -556,7 +555,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -595,7 +594,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 3 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -635,7 +634,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 4.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -675,7 +674,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 6 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -715,7 +714,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 7.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -755,7 +754,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 9 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -795,7 +794,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 10.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -835,7 +834,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 5,
-            width: 3*(window.innerWidth) / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 12 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -1073,10 +1072,12 @@ class Application extends React.Component {
           {/*Legend Window - Content Div Left*/}
           <div
             style={{
-              marginTop: 50,
+              marginTop: 30,
+              marginLeft: 50,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
-              fontSize: 10
+              fontSize: 10,
+              display: "inline-block"
             }}
           >
             {/*Legend Gods*/}
@@ -1087,11 +1088,16 @@ class Application extends React.Component {
             >
               <span
                 className="legendDot"
-                style={{ background: this.godsColor}}
+                style={{ background: this.godsColor }}
               />
-              <p style={{position: "inline-block"}}>
-                Place of Worship; # Stores: 50; Commonly Sold:
-                Religion
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Place of Worship; # Stores: 50; Commonly Sold: Religion
               </p>
             </div>
             {/*Legend Gods Stores*/}
@@ -1104,9 +1110,15 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.godsStoreColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Religious Good; # Stores: 50; Commonly Sold: Idols,
-                Incense, Vermillon
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Religious Good; # Stores: 50; Commonly Sold: Idols, Incense,
+                Vermillon
               </p>
             </div>
             {/*Legend Gods Beauty & Wedding*/}
@@ -1119,9 +1131,15 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.bnwColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Beauty & Wedding; # Stores: 50; Commonly Sold:
-                Bangles, Jewelry, Cosmetics, Bridal wear
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Beauty & Wedding; # Stores: 50; Commonly Sold: Bangles, Jewelry,
+                Cosmetics, Bridal wear
               </p>
             </div>
             {/*Legend Gods Kitchen Utensils*/}
@@ -1134,9 +1152,15 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.kitchenColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Kitchen Utensils; # Stores: 50; Commonly Sold: Pots,
-                Pans, Ladles, Crockery
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Kitchen Utensils; # Stores: 50; Commonly Sold: Pots, Pans,
+                Ladles, Crockery
               </p>
             </div>
             {/*Legend Grocery*/}
@@ -1149,10 +1173,28 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.groceryColor }}
               />
-              <p style={{ textAlign: "left" }}>
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
                 Grocery; # Stores: 50; Commonly Sold: Grains, Spices
               </p>
             </div>
+          </div>
+          {/*Legend Window - Content Div Right*/}
+          <div
+            style={{
+              marginTop: 30,
+              marginLeft: 50,
+              fontFamily: "ballinger-mono",
+              fontWeight: "Light",
+              fontSize: 10,
+              display: "inline-block"
+            }}
+          >
             {/*Legend Toys*/}
             <div
               style={{
@@ -1163,9 +1205,14 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.toysColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Toys; # Stores: 50; Commonly Sold: Dolls, Bikes,
-                Stuffed animals
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Toys; # Stores: 50; Commonly Sold: Dolls, Bikes, Stuffed animals
               </p>
             </div>
             {/*Legend Plastic Goods*/}
@@ -1178,9 +1225,15 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.plasticColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Plastic Goods; # Stores: 50; Commonly Sold: Mops,
-                Buckets, Diapers
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Plastic Goods; # Stores: 50; Commonly Sold: Mops, Buckets,
+                Diapers
               </p>
             </div>
             {/*Legend Restaurant*/}
@@ -1193,9 +1246,14 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.restoColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Restaurant; # Stores: 50; Commonly Sold: Meals &
-                snacks
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Restaurant; # Stores: 50; Commonly Sold: Meals & snacks
               </p>
             </div>
             {/*Legend Bars & Liquor*/}
@@ -1208,9 +1266,14 @@ class Application extends React.Component {
                 className="legendDot"
                 style={{ background: this.barsColor }}
               />
-              <p style={{ textAlign: "left" }}>
-                Bar & Liquor; # Stores: 50; Commonly Sold: Alcholic
-                beverages
+              <p
+                style={{
+                  display: "inline-block",
+                  verticalAlign: "middle",
+                  marginLeft: 10
+                }}
+              >
+                Bar & Liquor; # Stores: 50; Commonly Sold: Alcholic beverages
               </p>
             </div>
           </div>
