@@ -416,7 +416,7 @@ class Application extends React.Component {
       }
     }
     for (j = 8; i > -1; j--) {
-      if (currentScrollPos >= this.state.themeGap * j) {
+      if ((currentScrollPos > this.state.themeGap * (j+0.3)) && (currentScrollPos < this.state.themeGap * (j+1))) {
         this.prevVideoState = this.VideoState;
         this.VideoState = j;
         if (this.VideoState != this.prevVideoState) {
