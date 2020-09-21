@@ -322,7 +322,7 @@ button[aria-label][data-balloon-pos] {
     top:30px;
     font-family: ballinger-mono;
     font-size: 12;
-    line-height: 2;
+    line-height: 3;
 }
 
 .about {
