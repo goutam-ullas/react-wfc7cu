@@ -388,7 +388,7 @@ class Application extends React.Component {
     var i = 8;
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
-      if (currentScrollPos >= (this.state.themeGap * i * 1.25)) {
+      if (currentScrollPos >= (this.state.themeGap * i * 1.3)) {
         this.circleState = i;
         console.log(this.circleState);
         return;
