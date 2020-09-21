@@ -1117,7 +1117,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Place of Worship; # Stores: 50; Commonly Sold: Religion
+                Place of Worship; # Stores: 63; Commonly Sold: Religion
               </p>
             </div>
             {/*Legend Gods Stores*/}
@@ -1138,11 +1138,11 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Religious Goods; # Stores: 50; Commonly Sold: Idols, Incense,
+                Religious Goods; # Stores: 37; Commonly Sold: Idols, Incense,
                 Vermillon
               </p>
             </div>
-            {/*Legend Gods Beauty & Wedding*/}
+            {/*Legend Beauty & Wedding*/}
             <div
               style={{
                 marginLeft: 10,
@@ -1160,11 +1160,11 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Beauty & Wedding; # Stores: 50; Commonly Sold: Bangles, Jewelry,
+                Beauty & Wedding; # Stores: 196; Commonly Sold: Bangles, Jewelry,
                 Cosmetics, Bridal wear
               </p>
             </div>
-            {/*Legend Gods Kitchen Utensils*/}
+            {/*Legend Kitchen Utensils*/}
             <div
               style={{
                 marginLeft: 10,
@@ -1182,7 +1182,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Kitchen Utensils; # Stores: 50; Commonly Sold: Pots, Pans,
+                Kitchen Utensils; # Stores: 115; Commonly Sold: Pots, Pans,
                 Ladles, Crockery
               </p>
             </div>
@@ -1204,7 +1204,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Grocery; # Stores: 50; Commonly Sold: Grains, Spices
+                Grocery; # Stores: 33; Commonly Sold: Grains, Spices
               </p>
             </div>
           </div>
@@ -1236,7 +1236,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Toys; # Stores: 50; Commonly Sold: Dolls, Bikes, Stuffed animals
+                Toys; # Stores: 77; Commonly Sold: Dolls, Bikes, Stuffed animals
               </p>
             </div>
             {/*Legend Plastic Goods*/}
@@ -1257,7 +1257,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Plastic Goods; # Stores: 50; Commonly Sold: Mops, Buckets,
+                Plastic Goods; # Stores: 71; Commonly Sold: Mops, Buckets,
                 Diapers
               </p>
             </div>
@@ -1279,7 +1279,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Restaurant; # Stores: 50; Commonly Sold: Meals & snacks
+                Restaurant; # Stores: 5; Commonly Sold: Meals & snacks
               </p>
             </div>
             {/*Legend Bars & Liquor*/}
@@ -1300,7 +1300,7 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Bar & Liquor; # Stores: 50; Commonly Sold: Alcholic beverages
+                Bar & Liquor; # Stores: 2; Commonly Sold: Alcholic beverages
               </p>
             </div>
           </div>
