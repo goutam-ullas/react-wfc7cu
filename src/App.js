@@ -128,9 +128,10 @@ class Application extends React.Component {
   plasticColor = "#8f7f56";
   barsColor = "#57858e";
   /* Theme Position Variables*/
-  prevCircleState = 0;
   circleState = 0;
   maxThemes = 8;
+  prevVideoState = 0;
+  VideoState = 0;
   /*On Mount*/
   componentDidMount() {
     /*Update Dimenstions based on screen size*/
@@ -406,13 +407,19 @@ class Application extends React.Component {
   /* set circle state to current scroll position on scroll */
   setCircleState() {
     var i = 8;
-    var j = 1;
+    var j = 8;
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
       if (currentScrollPos >= this.state.themeGap * i * 1.48) {
-        this.prevCircleState = this.circleState;
         this.circleState = i;
-        if (this.circleState != this.prevCircleState) {
+        break;
+      }
+    }
+    for (j = 8; i > -1; j--) {
+      if (currentScrollPos >= this.state.themeGap * j) {
+        this.prevVideoState = this.VideoState;
+        this.VideoState = j;
+        if (this.VideoState != this.prevVideoState) {
           this.setState({
             videoPlaying1: false,
             videoPlaying2: false,
