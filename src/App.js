@@ -61,7 +61,8 @@ class Application extends React.Component {
       layerName: "",
       popUpPad: 0,
       popUpColor: "",
-      scaleDistance:13
+      scaleDistance:13,
+      videoPlaying: [false,false,false,false,false,false,false,false]
     };
     /*Bind Functions*/
     this.researchRef = React.createRef();
@@ -391,7 +392,7 @@ class Application extends React.Component {
     for (i = 8; i > -1; i--) {
       if (currentScrollPos >= this.state.themeGap * i * 1.3) {
         this.circleState = i;
-        return;
+        break;
       }
     }
   }
@@ -615,6 +616,7 @@ class Application extends React.Component {
             controls={true}
             onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
             onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
+            playing={false}
           />
         </div>
         {/*Theme 2*/}
