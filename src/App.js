@@ -61,8 +61,8 @@ class Application extends React.Component {
       layerName: "",
       popUpPad: 0,
       popUpColor: "",
-      scaleDistance:13,
-      videoPlaying: [false,false,false,false,false,false,false,false]
+      scaleDistance: 13,
+      videoPlaying: false
     };
     /*Bind Functions*/
     this.researchRef = React.createRef();
@@ -388,10 +388,12 @@ class Application extends React.Component {
   /* set circle state to current scroll position on scroll */
   setCircleState() {
     var i = 8;
+    var j = 1;
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
       if (currentScrollPos >= this.state.themeGap * i * 1.3) {
         this.circleState = i;
+        this.setState({videoPlaying:false})
         break;
       }
     }
@@ -542,12 +544,18 @@ class Application extends React.Component {
     this.setState({ value: v });
     var zoomLevel = (1 / 33) * (v - 1) + 18;
     if (zoomLevel < 19) {
-      this.setState({scaleDistance: Math.round(33.72 - 16.92 * (zoomLevel - 18))});
+      this.setState({
+        scaleDistance: Math.round(33.72 - 16.92 * (zoomLevel - 18))
+      });
     } else {
       if (zoomLevel < 20) {
-        this.setState({scaleDistance: Math.round(16.80 - 8.40 * (zoomLevel - 19))});
+        this.setState({
+          scaleDistance: Math.round(16.8 - 8.4 * (zoomLevel - 19))
+        });
       } else {
-        this.setState({scaleDistance: Math.round(8.40 - 4.20 * (zoomLevel - 20))});
+        this.setState({
+          scaleDistance: Math.round(8.4 - 4.2 * (zoomLevel - 20))
+        });
       }
     }
     this.map.zoomTo(zoomLevel);
@@ -616,7 +624,7 @@ class Application extends React.Component {
             controls={true}
             onPlay={() => this.setState({ videoDimX1: 1.25, videoZindex1: 10 })}
             onPause={() => this.setState({ videoDimX1: 1, videoZindex1: 1 })}
-            playing={false}
+            playing={this.state.videoPlaying}
           />
         </div>
         {/*Theme 2*/}
@@ -1043,12 +1051,12 @@ class Application extends React.Component {
         </div>
         {/*Map Scale Top Right*/}
         <div>
-        <span className="mapScaleMain" />
-        <span className="mapScaleSide" style={{ right: 25 }} />
-        <span className="mapScaleSide" style={{ right: 145 }} />
-        <text className="mapScaleNumber" style={{ right: 25 }}>
-          {this.state.scaleDistance} meters
-        </text>
+          <span className="mapScaleMain" />
+          <span className="mapScaleSide" style={{ right: 25 }} />
+          <span className="mapScaleSide" style={{ right: 145 }} />
+          <text className="mapScaleNumber" style={{ right: 25 }}>
+            {this.state.scaleDistance} meters
+          </text>
         </div>
         {/*About Window*/}
         <div
