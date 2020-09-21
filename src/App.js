@@ -1072,7 +1072,7 @@ class Application extends React.Component {
           {/*Legend Window - Content Div Left*/}
           <div
             style={{
-              marginTop: 30,
+              marginTop: 20,
               marginLeft: 50,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
@@ -1191,7 +1191,7 @@ class Application extends React.Component {
           {/*Legend Window - Content Div Right*/}
           <div
             style={{
-              marginTop: 30,
+              marginTop: 20,
               marginLeft: 50,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
