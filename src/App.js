@@ -60,7 +60,8 @@ class Application extends React.Component {
       pointName: "",
       layerName: "",
       popUpPad: 0,
-      popUpColor: ""
+      popUpColor: "",
+      scaleDistance:13
     };
     /*Bind Functions*/
     this.researchRef = React.createRef();
@@ -538,7 +539,17 @@ class Application extends React.Component {
   /*When Slider position is changed*/
   sliderChange(v) {
     this.setState({ value: v });
-    this.map.zoomTo((1 / 33) * (v - 1) + 18);
+    var zoomLevel = (1 / 33) * (v - 1) + 18;
+    if (zoomLevel < 19) {
+      this.setState({scaleDistance: Math.round(33.72 - 16.92 * (zoomLevel - 18))});
+    } else {
+      if (zoomLevel < 20) {
+        this.setState({scaleDistance: Math.round(16.80 - 8.40 * (zoomLevel - 19))});
+      } else {
+        this.setState({scaleDistance: Math.round(8.40 - 4.20 * (zoomLevel - 20))});
+      }
+    }
+    this.map.zoomTo(zoomLevel);
   }
 
   /*Function to toggle image size*/
@@ -1030,9 +1041,12 @@ class Application extends React.Component {
         </div>
         {/*Map Scale Top Right*/}
         <span className="mapScaleMain" />
-        <span className="mapScaleSide" style={{right:25}}/>
-        <span className="mapScaleSide" style={{right:145}}/>
-        <text className="mapScaleNumber" style={{right:45}}> 50 meter</text>
+        <span className="mapScaleSide" style={{ right: 25 }} />
+        <span className="mapScaleSide" style={{ right: 145 }} />
+        <text className="mapScaleNumber" style={{ right: 45 }}>
+          {" "}
+          {this.state.scaleDistance} meter
+        </text>
         {/*About Window*/}
         <div
           className="about"
