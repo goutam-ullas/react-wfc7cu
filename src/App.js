@@ -390,6 +390,7 @@ class Application extends React.Component {
     for (i = 8; i > 0; i--) {
       if (currentScrollPos > (this.state.themeGap * i * 1.505)) {
         this.circleState = i;
+        console.log(this.circleState);
         return;
       }
     }
