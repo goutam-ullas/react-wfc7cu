@@ -511,7 +511,7 @@ class Application extends React.Component {
       window.scrollTo(0, 0);
     } else {
       window.scrollTo({
-        top: this.state.themeGap * this.circleState * 1.5,
+        top: this.state.themeGap * this.circleState * 1.51,
         left: 0,
         behavior: "smooth"
       });
