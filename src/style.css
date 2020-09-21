@@ -296,6 +296,34 @@ button[aria-label][data-balloon-pos] {
   color: black;
 }
 
+.mapScaleMain{
+    display: block;
+    position: fixed;
+    height: 2px;
+    width: 120px;
+    background-color: #000000;
+    top:30px;
+    right:25px;
+}
+
+.mapScaleSide{
+    display: block;
+    position: fixed;
+    height: 10px;
+    width: 2px;
+    background-color: #000000;
+    top:25px;
+}
+
+.mapScaleNumber{
+    display: block;
+    position: fixed;
+    color: #000000;
+    top:30px;
+    font-family: ballinger-mono;
+    font-size: 12;
+}
+
 .about {
 color: white;
 position: fixed;

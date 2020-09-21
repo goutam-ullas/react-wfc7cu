@@ -388,9 +388,8 @@ class Application extends React.Component {
     var i = 8;
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
-      if (currentScrollPos >= (this.state.themeGap * i * 1.3)) {
+      if (currentScrollPos >= this.state.themeGap * i * 1.3) {
         this.circleState = i;
-        console.log(this.circleState);
         return;
       }
     }
@@ -1029,6 +1028,11 @@ class Application extends React.Component {
             Research
           </span>
         </div>
+        {/*Map Scale Top Right*/}
+        <span className="mapScaleMain" />
+        <span className="mapScaleSide" style={{right:25}}/>
+        <span className="mapScaleSide" style={{right:145}}/>
+        <text className="mapScaleNumber" style={{right:45}}> 50 meter</text>
         {/*About Window*/}
         <div
           className="about"
@@ -1158,8 +1162,8 @@ class Application extends React.Component {
                   marginLeft: 10
                 }}
               >
-                Beauty & Wedding; # Stores: 196; Commonly Sold: Bangles, Jewelry,
-                Cosmetics, Bridal wear
+                Beauty & Wedding; # Stores: 196; Commonly Sold: Bangles,
+                Jewelry, Cosmetics, Bridal wear
               </p>
             </div>
             {/*Legend Kitchen Utensils*/}
