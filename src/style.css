@@ -299,7 +299,7 @@ button[aria-label][data-balloon-pos] {
 .mapScaleMain{
     display: block;
     position: fixed;
-    height: 1.25px;
+    height: 1.22px;
     width: 120px;
     background-color: #000000;
     top:30px;
@@ -310,7 +310,7 @@ button[aria-label][data-balloon-pos] {
     display: block;
     position: fixed;
     height: 10px;
-    width: 1.25px;
+    width: 1.22px;
     background-color: #000000;
     top:25px;
 }
