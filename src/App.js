@@ -73,6 +73,7 @@ class Application extends React.Component {
     this.researchFunction = this.researchFunction.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
+    this.setCircleState = this.setCircleState.bind(this);
     /*Text Variables*/
     this.aboutText =
       "Goods, Gods and Goddesses alternates performances with moments of their making. In portraying the market, Begum Bazar, and the many goods, gods and goddesses that move this space, I am looking, seeking but also escaping what I’ve been rummaging. These are individual episodes, fragments of a whole, a whole I may never conceive. Because the thing is, in the telling of the various parts that will build this whole, I’m left with impressions of acts about acts, of scripted acts and scripting acts, of directing in the Bazar and being directed by the Bazar, of watching people perform with intermittent awareness of my own performance. Here, bodies become, a bride, a mother, a devotee, a woman. Stores advertise wholesale deals. Wholesale deals, more for less money, more for less effort, for becoming everything at once. It is a patch of land, yes, but a theatre, with rehearsals, scripts and episodic memories keeping gender intact, exacted and ordered, with outlines defined, insides determined, and borders enforced.";
@@ -377,7 +378,20 @@ class Application extends React.Component {
     });
     /*Remove PopUp when clicked on About, Research, or Legend windows*/
     window.addEventListener("mousedown", this.handleAboutResearchClick);
+
+    /* set circle state to current scroll position on scroll */
+    window.addEventListener("scroll", this.setCircleState);
   }
+  /* set circle state to current scroll position on scroll */
+  setCircleState() {
+    var currentScrollPos = window.pageYOffset;
+    for (var i = 8; i < 1; i--) {
+      if (currentScrollPos > this.state.themeGap * i * 1.505) {
+        this.circleState = i;
+      }
+    }
+  }
+
   /*When clicked on Home Button*/
   indexFunction() {
     console.log("index");
@@ -1245,7 +1259,7 @@ class Application extends React.Component {
             <div
               style={{
                 marginLeft: 10,
-                marginTop: -17                
+                marginTop: -17
               }}
             >
               <span
