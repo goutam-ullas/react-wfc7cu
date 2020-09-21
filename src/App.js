@@ -1192,7 +1192,7 @@ class Application extends React.Component {
           <div
             style={{
               marginTop: 20,
-              marginLeft: 50,
+              marginLeft: 100,
               fontFamily: "ballinger-mono",
               fontWeight: "Light",
               fontSize: 10,
