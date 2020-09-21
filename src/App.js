@@ -387,8 +387,8 @@ class Application extends React.Component {
   setCircleState() {
     var i = 8;
     var currentScrollPos = window.pageYOffset;
-    for (i = 8; i > 0; i--) {
-      if (currentScrollPos > (this.state.themeGap * i * 1.505)) {
+    for (i = 8; i > -1; i--) {
+      if (currentScrollPos >= (this.state.themeGap * i * 1.5)) {
         this.circleState = i;
         console.log(this.circleState);
         return;
