@@ -409,7 +409,7 @@ class Application extends React.Component {
     var j = 1;
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
-      if (currentScrollPos >= this.state.themeGap * i * 1.45) {
+      if (currentScrollPos >= this.state.themeGap * i * 1.48) {
         this.prevCircleState = this.circleState;
         this.circleState = i;
         if (this.circleState != this.prevCircleState) {
