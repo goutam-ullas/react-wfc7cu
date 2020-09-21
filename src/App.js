@@ -1045,7 +1045,7 @@ class Application extends React.Component {
         <span className="mapScaleSide" style={{ right: 25 }} />
         <span className="mapScaleSide" style={{ right: 145 }} />
         <text className="mapScaleNumber" style={{ right: 25 }}>
-          {this.state.scaleDistance} meter
+          {this.state.scaleDistance} meters
         </text>
         </div>
         {/*About Window*/}
