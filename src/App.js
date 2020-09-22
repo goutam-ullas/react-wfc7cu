@@ -675,7 +675,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex2
             }}
@@ -725,7 +725,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex3
             }}
@@ -775,7 +775,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex4
             }}
@@ -825,7 +825,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex5
             }}
@@ -875,7 +875,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex6
             }}
@@ -925,7 +925,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex7
             }}
@@ -975,7 +975,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 600,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex8
             }}
