@@ -71,15 +71,7 @@ class Application extends React.Component {
       layerName: "",
       popUpPad: 0,
       popUpColor: "",
-      scaleDistance: 13,
-      videoPlaying1: false,
-      videoPlaying2: false,
-      videoPlaying3: false,
-      videoPlaying4: false,
-      videoPlaying5: false,
-      videoPlaying6: false,
-      videoPlaying7: false,
-      videoPlaying8: false
+      scaleDistance: 13
     };
     /*Bind Functions*/
     this.researchRef = React.createRef();
@@ -415,25 +407,6 @@ class Application extends React.Component {
         break;
       }
     }
-    for (j = 8; i > -1; j--) {
-      if ((currentScrollPos > this.state.themeGap * (j+0.3)) && (currentScrollPos < this.state.themeGap * (j+1))) {
-        this.prevVideoState = this.VideoState;
-        this.VideoState = j;
-        if (this.VideoState != this.prevVideoState) {
-          this.setState({
-            videoPlaying1: false,
-            videoPlaying2: false,
-            videoPlaying3: false,
-            videoPlaying4: false,
-            videoPlaying5: false,
-            videoPlaying6: false,
-            videoPlaying7: false,
-            videoPlaying8: false
-          });
-        }
-        break;
-      }
-    }
   }
 
   /*When clicked on Home Button*/
@@ -674,7 +647,6 @@ class Application extends React.Component {
                 videoPlaying1: false
               })
             }
-            playing={this.state.videoPlaying1}
           />
         </div>
         {/*Theme 2*/}
@@ -713,9 +685,20 @@ class Application extends React.Component {
             width={this.state.videoDimX2 * this.state.videoWidth}
             url={this.theme2Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX2: 1.25, videoZindex2: 10,videoPlaying2:true })}
-            onPause={() => this.setState({ videoDimX2: 1, videoZindex2: 1,videoPlaying2: false })}
-            playing={this.state.videoPlaying2}
+            onPlay={() =>
+              this.setState({
+                videoDimX2: 1.25,
+                videoZindex2: 10,
+                videoPlaying2: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX2: 1,
+                videoZindex2: 1,
+                videoPlaying2: false
+              })
+            }
           />
         </div>
         {/*Theme 3*/}
@@ -754,9 +737,20 @@ class Application extends React.Component {
             width={this.state.videoDimX3 * this.state.videoWidth}
             url={this.theme3Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX3: 1.25, videoZindex3: 10, videoPlaying3:true })}
-            onPause={() => this.setState({ videoDimX3: 1, videoZindex3: 1, videoPlaying3:false })}
-            playing={this.state.videoPlaying3}
+            onPlay={() =>
+              this.setState({
+                videoDimX3: 1.25,
+                videoZindex3: 10,
+                videoPlaying3: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX3: 1,
+                videoZindex3: 1,
+                videoPlaying3: false
+              })
+            }
           />
         </div>
         {/*Theme 4*/}
@@ -795,9 +789,20 @@ class Application extends React.Component {
             width={this.state.videoDimX4 * this.state.videoWidth}
             url={this.theme4Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX4: 1.25, videoZindex4: 10, videoPlaying4:true })}
-            onPause={() => this.setState({ videoDimX4: 1, videoZindex4: 1, videoPlaying4: false })}
-            playing={this.state.videoPlaying4}
+            onPlay={() =>
+              this.setState({
+                videoDimX4: 1.25,
+                videoZindex4: 10,
+                videoPlaying4: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX4: 1,
+                videoZindex4: 1,
+                videoPlaying4: false
+              })
+            }
           />
         </div>
         {/*Theme 5*/}
@@ -836,9 +841,20 @@ class Application extends React.Component {
             width={this.state.videoDimX5 * this.state.videoWidth}
             url={this.theme5Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX5: 1.25, videoZindex5: 10, videoPlaying5: true })}
-            onPause={() => this.setState({ videoDimX5: 1, videoZindex5: 1, videoPlaying5: false })}
-            playing={this.state.videoPlaying5}
+            onPlay={() =>
+              this.setState({
+                videoDimX5: 1.25,
+                videoZindex5: 10,
+                videoPlaying5: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX5: 1,
+                videoZindex5: 1,
+                videoPlaying5: false
+              })
+            }
           />
         </div>
         {/*Theme 6*/}
@@ -877,9 +893,20 @@ class Application extends React.Component {
             width={this.state.videoDimX6 * this.state.videoWidth}
             url={this.theme6Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX6: 1.25, videoZindex6: 10, videoPlaying6: true })}
-            onPause={() => this.setState({ videoDimX6: 1, videoZindex6: 1, videoPlaying6: false })}
-            playing={this.state.videoPlaying6}
+            onPlay={() =>
+              this.setState({
+                videoDimX6: 1.25,
+                videoZindex6: 10,
+                videoPlaying6: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX6: 1,
+                videoZindex6: 1,
+                videoPlaying6: false
+              })
+            }
           />
         </div>
         {/*Theme 7*/}
@@ -918,9 +945,20 @@ class Application extends React.Component {
             width={this.state.videoDimX7 * this.state.videoWidth}
             url={this.theme7Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX7: 1.25, videoZindex7: 10, videoPlaying7:true })}
-            onPause={() => this.setState({ videoDimX7: 1, videoZindex7: 1, videoPlaying7:false })}
-            playing={this.state.videoPlaying7}
+            onPlay={() =>
+              this.setState({
+                videoDimX7: 1.25,
+                videoZindex7: 10,
+                videoPlaying7: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX7: 1,
+                videoZindex7: 1,
+                videoPlaying7: false
+              })
+            }
           />
         </div>
         {/*Theme 8*/}
@@ -959,9 +997,20 @@ class Application extends React.Component {
             width={this.state.videoDimX8 * this.state.videoWidth}
             url={this.theme8Video}
             controls={true}
-            onPlay={() => this.setState({ videoDimX8: 1.25, videoZindex8: 10, videoPlaying8:true })}
-            onPause={() => this.setState({ videoDimX8: 1, videoZindex8: 1, videoPlaying8: false })}
-            playing={this.state.videoPlaying8}
+            onPlay={() =>
+              this.setState({
+                videoDimX8: 1.25,
+                videoZindex8: 10,
+                videoPlaying8: true
+              })
+            }
+            onPause={() =>
+              this.setState({
+                videoDimX8: 1,
+                videoZindex8: 1,
+                videoPlaying8: false
+              })
+            }
           />
         </div>
         {/*End of Themes Buffer*/}
