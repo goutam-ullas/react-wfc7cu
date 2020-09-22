@@ -612,7 +612,7 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: "30%",
+              width: "50%",
               position: "absolute",
               bottom: 70,
               zIndex: 5
