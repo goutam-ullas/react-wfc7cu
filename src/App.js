@@ -601,8 +601,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 6,
-            width: (2 * window.innerWidth) / 3,
+            left: window.innerWidth / 5,
+            width: (3 * window.innerWidth) / 5,
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -612,7 +612,7 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: "50%",
+              width: "40%",
               position: "absolute",
               bottom: 70,
               zIndex: 5
