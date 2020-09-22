@@ -625,7 +625,7 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 800,
+              left: 1000,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex1
             }}
