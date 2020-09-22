@@ -651,8 +651,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 3 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -701,8 +701,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 4.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -751,8 +751,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 6 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -801,8 +801,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 7.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -851,8 +851,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 9 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -901,8 +901,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 10.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -951,8 +951,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 5,
-            width: (3 * window.innerWidth) / 5,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 12 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -1001,8 +1001,8 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 6,
-            width: (2 * window.innerWidth) / 3,
+            left: window.innerWidth / 8,
+            width: (3 * window.innerWidth) / 4,
             top: 13.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
