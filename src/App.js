@@ -636,15 +636,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX1: 1.25,
-                videoZindex1: 10,
-                videoPlaying1: true
+                videoZindex1: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX1: 1,
-                videoZindex1: 1,
-                videoPlaying1: false
+                videoZindex1: 1
               })
             }
           />
@@ -688,15 +686,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX2: 1.25,
-                videoZindex2: 10,
-                videoPlaying2: true
+                videoZindex2: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX2: 1,
-                videoZindex2: 1,
-                videoPlaying2: false
+                videoZindex2: 1
               })
             }
           />
@@ -740,15 +736,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX3: 1.25,
-                videoZindex3: 10,
-                videoPlaying3: true
+                videoZindex3: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX3: 1,
-                videoZindex3: 1,
-                videoPlaying3: false
+                videoZindex3: 1
               })
             }
           />
@@ -792,15 +786,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX4: 1.25,
-                videoZindex4: 10,
-                videoPlaying4: true
+                videoZindex4: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX4: 1,
-                videoZindex4: 1,
-                videoPlaying4: false
+                videoZindex4: 1
               })
             }
           />
@@ -844,15 +836,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX5: 1.25,
-                videoZindex5: 10,
-                videoPlaying5: true
+                videoZindex5: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX5: 1,
-                videoZindex5: 1,
-                videoPlaying5: false
+                videoZindex5: 1
               })
             }
           />
@@ -896,15 +886,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX6: 1.25,
-                videoZindex6: 10,
-                videoPlaying6: true
+                videoZindex6: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX6: 1,
-                videoZindex6: 1,
-                videoPlaying6: false
+                videoZindex6: 1
               })
             }
           />
@@ -948,15 +936,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX7: 1.25,
-                videoZindex7: 10,
-                videoPlaying7: true
+                videoZindex7: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX7: 1,
-                videoZindex7: 1,
-                videoPlaying7: false
+                videoZindex7: 1
               })
             }
           />
@@ -1000,15 +986,13 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX8: 1.25,
-                videoZindex8: 10,
-                videoPlaying8: true
+                videoZindex8: 10
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX8: 1,
-                videoZindex8: 1,
-                videoPlaying8: false
+                videoZindex8: 1
               })
             }
           />
