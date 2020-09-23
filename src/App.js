@@ -416,21 +416,16 @@ class Application extends React.Component {
   /*check if element in viewport */
   elementInViewport(el) {
     var top = el.offsetTop;
-    var left = el.offsetLeft;
-    var width = el.offsetWidth;
     var height = el.offsetHeight;
 
     while (el.offsetParent) {
       el = el.offsetParent;
       top += el.offsetTop;
-      left += el.offsetLeft;
     }
 
     return (
       top >= window.pageYOffset &&
-      left >= window.pageXOffset &&
-      top + height <= window.pageYOffset + window.innerHeight &&
-      left + width <= window.pageXOffset + window.innerWidth
+      top + height <= window.pageYOffset + window.innerHeight
     );
   }
 
@@ -683,13 +678,15 @@ class Application extends React.Component {
             onPlay={() =>
               this.setState({
                 videoDimX1: 1.25,
-                videoZindex1: 10
+                videoZindex1: 10,
+                playing:true
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX1: 1,
-                videoZindex1: 1
+                videoZindex1: 1,
+                playing:false
               })
             }
           />
