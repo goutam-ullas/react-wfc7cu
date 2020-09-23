@@ -439,7 +439,7 @@ class Application extends React.Component {
         break;
       }
     }
-    if(this.elementInViewport(this.video1Ref)==false){this.setState({video1play: false});}
+    if(this.elementInViewport(this.video1Ref)===false){this.setState({video1play: false});}
     if(this.elementInViewport(this.video2Ref)==false){this.setState({video2play: false});}
     if(this.elementInViewport(this.video3Ref)==false){this.setState({video3play: false});}
     if(this.elementInViewport(this.video4Ref)==false){this.setState({video4play: false});}
