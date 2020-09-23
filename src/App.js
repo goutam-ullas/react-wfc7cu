@@ -1503,7 +1503,7 @@ class Application extends React.Component {
               backgroundColor: this.state.popUpColor,
               alignSelf: "flex-start",
               padding: this.state.popUpPad,
-              zIndex: 2
+              zIndex: 1
             }}
           >
             {this.state.pointName} <br /> {this.state.layerName}
