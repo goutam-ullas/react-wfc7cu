@@ -77,6 +77,14 @@ class Application extends React.Component {
     this.researchRef = React.createRef();
     this.aboutRef = React.createRef();
     this.legendRef = React.createRef();
+    this.video1Ref = React.createRef();
+    this.video2Ref = React.createRef();
+    this.video3Ref = React.createRef();
+    this.video4Ref = React.createRef();
+    this.video5Ref = React.createRef();
+    this.video6Ref = React.createRef();
+    this.video7Ref = React.createRef();
+    this.video8Ref = React.createRef();
     this.handleAboutResearchClick = this.handleAboutResearchClick.bind(this);
     this.circleFunction = this.circleFunction.bind(this);
     this.aboutFunction = this.aboutFunction.bind(this);
@@ -396,6 +404,27 @@ class Application extends React.Component {
     window.addEventListener("scroll", this.setCircleState);
   }
 
+  /*check if element in viewport */
+  elementInViewport(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+
+    while (el.offsetParent) {
+      el = el.offsetParent;
+      top += el.offsetTop;
+      left += el.offsetLeft;
+    }
+
+    return (
+      top >= window.pageYOffset &&
+      left >= window.pageXOffset &&
+      top + height <= window.pageYOffset + window.innerHeight &&
+      left + width <= window.pageXOffset + window.innerWidth
+    );
+  }
+
   /* set circle state to current scroll position on scroll */
   setCircleState() {
     var i = 8;
@@ -623,6 +652,7 @@ class Application extends React.Component {
           {/*Theme 1 Video*/}
           <ReactPlayer
             className="video"
+            ref={this.video1Ref}
             style={{
               position: "sticky",
               left: 1000,
