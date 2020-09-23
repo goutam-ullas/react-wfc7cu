@@ -444,14 +444,14 @@ class Application extends React.Component {
         break;
       }
     }
-    if(elementInViewport(this.video1Ref)==false){this.setState({video1play: false});}
-    if(elementInViewport(this.video2Ref)==false){this.setState({video2play: false});}
-    if(elementInViewport(this.video3Ref)==false){this.setState({video3play: false});}
-    if(elementInViewport(this.video4Ref)==false){this.setState({video4play: false});}
-    if(elementInViewport(this.video5Ref)==false){this.setState({video5play: false});}
-    if(elementInViewport(this.video6Ref)==false){this.setState({video6play: false});}
-    if(elementInViewport(this.video7Ref)==false){this.setState({video7play: false});}
-    if(elementInViewport(this.video8Ref)==false){this.setState({video8play: false});}
+    if(this.elementInViewport(this.video1Ref)==false){this.setState({video1play: false});}
+    if(this.elementInViewport(this.video2Ref)==false){this.setState({video2play: false});}
+    if(this.elementInViewport(this.video3Ref)==false){this.setState({video3play: false});}
+    if(this.elementInViewport(this.video4Ref)==false){this.setState({video4play: false});}
+    if(this.elementInViewport(this.video5Ref)==false){this.setState({video5play: false});}
+    if(this.elementInViewport(this.video6Ref)==false){this.setState({video6play: false});}
+    if(this.elementInViewport(this.video7Ref)==false){this.setState({video7play: false});}
+    if(this.elementInViewport(this.video8Ref)==false){this.setState({video8play: false});}
   }
 
   /*When clicked on Home Button*/
