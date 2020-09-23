@@ -71,7 +71,15 @@ class Application extends React.Component {
       layerName: "",
       popUpPad: 0,
       popUpColor: "",
-      scaleDistance: 13
+      scaleDistance: 13,
+      video1play: false,
+      video2play: false,
+      video3play: false,
+      video4play: false,
+      video5play: false,
+      video6play: false,
+      video7play: false,
+      video8play: false
     };
     /*Bind Functions*/
     this.researchRef = React.createRef();
@@ -428,7 +436,6 @@ class Application extends React.Component {
   /* set circle state to current scroll position on scroll */
   setCircleState() {
     var i = 8;
-    var j = 8;
     var currentScrollPos = window.pageYOffset;
     for (i = 8; i > -1; i--) {
       if (currentScrollPos >= this.state.themeGap * i * 1.48) {
@@ -436,6 +443,14 @@ class Application extends React.Component {
         break;
       }
     }
+    if(!elementInViewport(this.video1Ref)){this.setState({video1play: false});}
+    if(!elementInViewport(this.video2Ref)){this.setState({video2play: false});}
+    if(!elementInViewport(this.video3Ref)){this.setState({video3play: false});}
+    if(!elementInViewport(this.video4Ref)){this.setState({video4play: false});}
+    if(!elementInViewport(this.video5Ref)){this.setState({video5play: false});}
+    if(!elementInViewport(this.video6Ref)){this.setState({video6play: false});}
+    if(!elementInViewport(this.video7Ref)){this.setState({video7play: false});}
+    if(!elementInViewport(this.video8Ref)){this.setState({video8play: false});}
   }
 
   /*When clicked on Home Button*/
@@ -663,6 +678,7 @@ class Application extends React.Component {
             width={this.state.videoDimX1 * this.state.videoWidth}
             url={this.theme1Video}
             controls={true}
+            playing={this.state.video1play}
             onPlay={() =>
               this.setState({
                 videoDimX1: 1.25,
