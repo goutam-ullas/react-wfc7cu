@@ -739,21 +739,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 3 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 2 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -763,9 +765,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex2
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX2 * this.state.videoHeight}
             width={this.state.videoDimX2 * this.state.videoWidth}
@@ -789,21 +792,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 4.5 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 3 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -813,9 +818,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex3
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX3 * this.state.videoHeight}
             width={this.state.videoDimX3 * this.state.videoWidth}
@@ -839,21 +845,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 6 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 4 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -863,9 +871,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex4
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX4 * this.state.videoHeight}
             width={this.state.videoDimX4 * this.state.videoWidth}
@@ -889,21 +898,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 7.5 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 5 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -913,9 +924,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex5
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX5 * this.state.videoHeight}
             width={this.state.videoDimX5 * this.state.videoWidth}
@@ -939,21 +951,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 9 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 6 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -963,9 +977,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex6
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX6 * this.state.videoHeight}
             width={this.state.videoDimX6 * this.state.videoWidth}
@@ -989,21 +1004,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 10.5 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 7 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -1013,9 +1030,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex7
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX7 * this.state.videoHeight}
             width={this.state.videoDimX7 * this.state.videoWidth}
@@ -1039,21 +1057,23 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
-            top: 12 * this.state.themeGap,
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
+            top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 8 Description*/}
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
-              zIndex: 5
+              bottom: this.state.themeDescBottom,
+              zIndex: 5,
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -1063,9 +1083,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex8
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX8 * this.state.videoHeight}
             width={this.state.videoDimX8 * this.state.videoWidth}
