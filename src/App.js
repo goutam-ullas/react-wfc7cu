@@ -681,7 +681,8 @@ class Application extends React.Component {
             width: (this.state.themeWidth * window.innerWidth),
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
-            pointerEvents: "none"
+            pointerEvents: "none",
+            transition: "width 1s"
           }}
         >
           {/*Theme 1 Description*/}
