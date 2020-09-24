@@ -75,6 +75,7 @@ class Application extends React.Component {
       themeWidth: 0.75,
       themeDescWidth: "40%",
       themeDescBottom: 70,
+      themeVidLeft:1000,
       video1play: false,
       video2play: false,
       video3play: false,
@@ -520,14 +521,16 @@ class Application extends React.Component {
         aboutWidth: window.innerWidth / 2,
         themeWidth: 0.25,
         themeDescWidth: "100%",
-        themeDescBottom: 600
+        themeDescBottom: 600,
+        themeVidLeft:500
       });
     } else {
       this.setState({
         aboutWidth: 0,
         themeWidth: 0.75,
         themeDescWidth: "40%",
-        themeDescBottom: 70
+        themeDescBottom: 70,
+        themeVidLeft:1000
       });
     }
   }
@@ -582,7 +585,8 @@ class Application extends React.Component {
         researchBorder: 50,
         themeWidth: 0.25,
         themeDescWidth: "100%",
-        themeDescBottom: 600
+        themeDescBottom: 600,
+        themeVidLeft:500
       });
     } else {
       this.setState({
@@ -590,7 +594,8 @@ class Application extends React.Component {
         researchBorder: 0,
         themeWidth: 0.75,
         themeDescWidth: "40%",
-        themeDescBottom: 70
+        themeDescBottom: 70,
+        themeVidLeft:1000
       });
     }
   }
@@ -703,7 +708,7 @@ class Application extends React.Component {
             ref={this.video1Ref}
             style={{
               position: "sticky",
-              left: 1000,
+              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex1
             }}
