@@ -72,6 +72,9 @@ class Application extends React.Component {
       popUpPad: 0,
       popUpColor: "",
       scaleDistance: 13,
+      themeWidth: 0.75,
+      themeDescWidth: "100%",
+      themeDescBottom: 70,
       video1play: false,
       video2play: false,
       video3play: false,
@@ -439,14 +442,30 @@ class Application extends React.Component {
         break;
       }
     }
-    if(this.elementInViewport(this.video1Ref)==false){this.setState({video1play: false});}
-    if(this.elementInViewport(this.video2Ref)==false){this.setState({video2play: false});}
-    if(this.elementInViewport(this.video3Ref)==false){this.setState({video3play: false});}
-    if(this.elementInViewport(this.video4Ref)==false){this.setState({video4play: false});}
-    if(this.elementInViewport(this.video5Ref)==false){this.setState({video5play: false});}
-    if(this.elementInViewport(this.video6Ref)==false){this.setState({video6play: false});}
-    if(this.elementInViewport(this.video7Ref)==false){this.setState({video7play: false});}
-    if(this.elementInViewport(this.video8Ref)==false){this.setState({video8play: false});}
+    if (this.elementInViewport(this.video1Ref) == false) {
+      this.setState({ video1play: false });
+    }
+    if (this.elementInViewport(this.video2Ref) == false) {
+      this.setState({ video2play: false });
+    }
+    if (this.elementInViewport(this.video3Ref) == false) {
+      this.setState({ video3play: false });
+    }
+    if (this.elementInViewport(this.video4Ref) == false) {
+      this.setState({ video4play: false });
+    }
+    if (this.elementInViewport(this.video5Ref) == false) {
+      this.setState({ video5play: false });
+    }
+    if (this.elementInViewport(this.video6Ref) == false) {
+      this.setState({ video6play: false });
+    }
+    if (this.elementInViewport(this.video7Ref) == false) {
+      this.setState({ video7play: false });
+    }
+    if (this.elementInViewport(this.video8Ref) == false) {
+      this.setState({ video8play: false });
+    }
   }
 
   /*When clicked on Home Button*/
@@ -480,7 +499,6 @@ class Application extends React.Component {
   }
   /*When clicked on About button*/
   aboutFunction() {
-    console.log("about");
     this.setState(prevState => ({
       aboutState: !prevState.aboutState
     }));
@@ -498,9 +516,19 @@ class Application extends React.Component {
       this.setState({ legendHeight: 0, legendState: true });
     }
     if (this.state.aboutState == true) {
-      this.setState({ aboutWidth: window.innerWidth / 2 });
+      this.setState({
+        aboutWidth: window.innerWidth / 2,
+        themeWidth: 0.25,
+        themeDescWidth: "40%",
+        themeDescBottom: 600
+      });
     } else {
-      this.setState({ aboutWidth: 0 });
+      this.setState({
+        aboutWidth: 0,
+        themeWidth: 0.75,
+        themeDescWidth: "100%",
+        themeDescBottom: 70
+      });
     }
   }
   /*When clicked on Legend button*/
@@ -532,7 +560,6 @@ class Application extends React.Component {
   }
   /*When clicked on Research button*/
   researchFunction() {
-    console.log("research");
     this.setState(prevState => ({
       researchState: !prevState.researchState
     }));
@@ -552,10 +579,19 @@ class Application extends React.Component {
     if (this.state.researchState == true) {
       this.setState({
         researchWidth: window.innerWidth / 2,
-        researchBorder: 50
+        researchBorder: 50,
+        themeWidth: 0.25,
+        themeDescWidth: "40%",
+        themeDescBottom: 600
       });
     } else {
-      this.setState({ researchWidth: 0, researchBorder: 0 });
+      this.setState({
+        researchWidth: 0,
+        researchBorder: 0,
+        themeWidth: 0.75,
+        themeDescWidth: "100%",
+        themeDescBottom: 70
+      });
     }
   }
   /*When clicked on Next button*/
@@ -642,7 +678,7 @@ class Application extends React.Component {
           style={{
             position: "absolute",
             left: window.innerWidth / 8,
-            width: (3 * window.innerWidth) / 4,
+            width: (this.state.themeWidth * window.innerWidth),
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none"
@@ -652,9 +688,9 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: "40%",
+              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: 70,
+              bottom: this.state.themeDescBottom,
               zIndex: 5
             }}
           >
@@ -679,14 +715,14 @@ class Application extends React.Component {
               this.setState({
                 videoDimX1: 1.25,
                 videoZindex1: 10,
-                playing:true
+                playing: true
               })
             }
             onPause={() =>
               this.setState({
                 videoDimX1: 1,
                 videoZindex1: 1,
-                playing:false
+                playing: false
               })
             }
           />
