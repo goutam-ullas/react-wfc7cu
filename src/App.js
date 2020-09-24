@@ -687,7 +687,7 @@ class Application extends React.Component {
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            transition: "width 1s"
+            transition: "width 1s, left 1s"
           }}
         >
           {/*Theme 1 Description*/}
@@ -697,7 +697,8 @@ class Application extends React.Component {
               width: this.state.themeDescWidth,
               position: "absolute",
               bottom: this.state.themeDescBottom,
-              zIndex: 5
+              zIndex: 5,
+              transition: "width 1s, left 1s"
             }}
           >
             <text className="themeDesc">{this.theme1Desc}</text>
