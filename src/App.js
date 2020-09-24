@@ -1220,7 +1220,7 @@ class Application extends React.Component {
             &#10005;
           </span>
           {/*About Window - Text Content*/}
-          <p style={{ margin: 50, fontSize: 18 }}> {this.aboutText} </p>
+          <p style={{ margin: 50, fontSize: 14 }}> {this.aboutText} </p>
         </div>
         {/*Legend Window*/}
         <div
