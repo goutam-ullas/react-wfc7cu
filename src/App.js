@@ -522,7 +522,7 @@ class Application extends React.Component {
         themeWidth: 0.25,
         themeDescWidth: "100%",
         themeDescBottom: 600,
-        themeVidLeft:500
+        themeVidLeft:0
       });
     } else {
       this.setState({
@@ -586,7 +586,7 @@ class Application extends React.Component {
         themeWidth: 0.25,
         themeDescWidth: "100%",
         themeDescBottom: 600,
-        themeVidLeft:500
+        themeVidLeft:0
       });
     } else {
       this.setState({
