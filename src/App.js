@@ -1199,7 +1199,7 @@ class Application extends React.Component {
           style={{
             width: this.state.aboutWidth,
             height: window.innerHeight,
-            fontSize: 28,
+            fontSize: 14,
             zIndex: 100
           }}
         >
