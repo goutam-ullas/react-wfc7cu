@@ -519,7 +519,7 @@ class Application extends React.Component {
     if (this.state.aboutState == true) {
       this.setState({
         aboutWidth: window.innerWidth / 2,
-        themeWidth: 0.25,
+        themeWidth: 0.375,
         themeDescWidth: "100%",
         themeDescBottom: 600,
         themeVidLeft:-1000
@@ -583,7 +583,7 @@ class Application extends React.Component {
       this.setState({
         researchWidth: window.innerWidth / 2,
         researchBorder: 50,
-        themeWidth: 0.25,
+        themeWidth: 0.375,
         themeDescWidth: "100%",
         themeDescBottom: 600,
         themeVidLeft:-1000
@@ -682,7 +682,7 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: this.state.themeWidth / 8 + (1/32),
+            left: this.state.themeWidth / 6,
             width: (this.state.themeWidth * window.innerWidth),
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
