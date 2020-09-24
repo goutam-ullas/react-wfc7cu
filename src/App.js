@@ -586,7 +586,7 @@ class Application extends React.Component {
         themeWidth: 0.25,
         themeDescWidth: "100%",
         themeDescBottom: 600,
-        themeVidLeft:0
+        themeVidLeft:-100
       });
     } else {
       this.setState({
