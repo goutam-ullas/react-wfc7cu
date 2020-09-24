@@ -708,11 +708,9 @@ class Application extends React.Component {
             className="video"
             ref={this.video1Ref}
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex1,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
             width={this.state.videoDimX1 * this.state.videoWidth}
@@ -764,11 +762,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex2,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX2 * this.state.videoHeight}
             width={this.state.videoDimX2 * this.state.videoWidth}
@@ -817,11 +813,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex3,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"              
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX3 * this.state.videoHeight}
             width={this.state.videoDimX3 * this.state.videoWidth}
@@ -870,11 +864,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex4,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"              
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX4 * this.state.videoHeight}
             width={this.state.videoDimX4 * this.state.videoWidth}
@@ -923,11 +915,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex5,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"              
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX5 * this.state.videoHeight}
             width={this.state.videoDimX5 * this.state.videoWidth}
@@ -976,11 +966,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex6,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX6 * this.state.videoHeight}
             width={this.state.videoDimX6 * this.state.videoWidth}
@@ -1029,11 +1017,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex7,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX7 * this.state.videoHeight}
             width={this.state.videoDimX7 * this.state.videoWidth}
@@ -1082,11 +1068,9 @@ class Application extends React.Component {
           <ReactPlayer
             className="video"
             style={{
-              position: "sticky",
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex8,
-              left: this.state.themeVidLeft,
-              transition: "left 1s"
+              left: this.state.themeVidLeft
             }}
             height={this.state.videoDimX8 * this.state.videoHeight}
             width={this.state.videoDimX8 * this.state.videoWidth}
