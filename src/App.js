@@ -73,7 +73,7 @@ class Application extends React.Component {
       popUpColor: "",
       scaleDistance: 13,
       themeWidth: 0.75,
-      themeDescWidth: "100%",
+      themeDescWidth: "40%",
       themeDescBottom: 70,
       video1play: false,
       video2play: false,
@@ -519,14 +519,14 @@ class Application extends React.Component {
       this.setState({
         aboutWidth: window.innerWidth / 2,
         themeWidth: 0.25,
-        themeDescWidth: "40%",
+        themeDescWidth: "100%",
         themeDescBottom: 600
       });
     } else {
       this.setState({
         aboutWidth: 0,
         themeWidth: 0.75,
-        themeDescWidth: "100%",
+        themeDescWidth: "40%",
         themeDescBottom: 70
       });
     }
@@ -581,7 +581,7 @@ class Application extends React.Component {
         researchWidth: window.innerWidth / 2,
         researchBorder: 50,
         themeWidth: 0.25,
-        themeDescWidth: "40%",
+        themeDescWidth: "100%",
         themeDescBottom: 600
       });
     } else {
@@ -589,7 +589,7 @@ class Application extends React.Component {
         researchWidth: 0,
         researchBorder: 0,
         themeWidth: 0.75,
-        themeDescWidth: "100%",
+        themeDescWidth: "40%",
         themeDescBottom: 70
       });
     }
