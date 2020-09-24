@@ -682,11 +682,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -694,10 +694,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -709,9 +709,9 @@ class Application extends React.Component {
             ref={this.video1Ref}
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex1,
+              left: this.state.themeVidLeft,
               transition: "left 1s"
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
@@ -739,11 +739,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 3 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -751,10 +751,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -765,9 +765,9 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
+              zIndex: this.state.videoZindex2,
+              left: this.state.themeVidLeft,
               transition: "left 1s"
             }}
             height={this.state.videoDimX2 * this.state.videoHeight}
@@ -792,11 +792,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 4.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -804,10 +804,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -818,10 +818,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
-              transition: "left 1s"
+              zIndex: this.state.videoZindex3,
+              left: this.state.themeVidLeft,
+              transition: "left 1s"              
             }}
             height={this.state.videoDimX3 * this.state.videoHeight}
             width={this.state.videoDimX3 * this.state.videoWidth}
@@ -845,11 +845,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 6 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -857,11 +857,11 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
-              transition: "width 1s, bottom 1s"
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
+              transition: "width 1s, bottom 1s"              
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -871,10 +871,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
-              transition: "left 1s"
+              zIndex: this.state.videoZindex4,
+              left: this.state.themeVidLeft,
+              transition: "left 1s"              
             }}
             height={this.state.videoDimX4 * this.state.videoHeight}
             width={this.state.videoDimX4 * this.state.videoWidth}
@@ -898,11 +898,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 7.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -910,10 +910,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -924,10 +924,10 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
-              transition: "left 1s"
+              zIndex: this.state.videoZindex5,
+              left: this.state.themeVidLeft,
+              transition: "left 1s"              
             }}
             height={this.state.videoDimX5 * this.state.videoHeight}
             width={this.state.videoDimX5 * this.state.videoWidth}
@@ -951,11 +951,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 9 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -963,10 +963,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -977,9 +977,9 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
+              zIndex: this.state.videoZindex6,
+              left: this.state.themeVidLeft,
               transition: "left 1s"
             }}
             height={this.state.videoDimX6 * this.state.videoHeight}
@@ -1004,11 +1004,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 10.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -1016,10 +1016,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -1030,9 +1030,9 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
+              zIndex: this.state.videoZindex7,
+              left: this.state.themeVidLeft,
               transition: "left 1s"
             }}
             height={this.state.videoDimX7 * this.state.videoHeight}
@@ -1057,11 +1057,11 @@ class Application extends React.Component {
         <div
           style={{
             position: "absolute",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
-            top: 1.47 * this.state.themeGap,
+            top: 12 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
+            left: window.innerWidth*this.state.themeWidth / 6,
+            width: (this.state.themeWidth * window.innerWidth),
             transition: "width 1s, left 1s"
           }}
         >
@@ -1069,10 +1069,10 @@ class Application extends React.Component {
           <div
             style={{
               padding: 20,
-              width: this.state.themeDescWidth,
               position: "absolute",
-              bottom: this.state.themeDescBottom,
               zIndex: 5,
+              width: this.state.themeDescWidth,
+              bottom: this.state.themeDescBottom,
               transition: "width 1s, bottom 1s"
             }}
           >
@@ -1083,9 +1083,9 @@ class Application extends React.Component {
             className="video"
             style={{
               position: "sticky",
-              left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1,
+              zIndex: this.state.videoZindex8,
+              left: this.state.themeVidLeft,
               transition: "left 1s"
             }}
             height={this.state.videoDimX8 * this.state.videoHeight}
