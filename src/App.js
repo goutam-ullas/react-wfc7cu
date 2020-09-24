@@ -698,7 +698,7 @@ class Application extends React.Component {
               position: "absolute",
               bottom: this.state.themeDescBottom,
               zIndex: 5,
-              transition: "width 1s, left 1s"
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme1Desc}</text>
