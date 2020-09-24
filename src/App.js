@@ -522,7 +522,7 @@ class Application extends React.Component {
         themeWidth: 0.375,
         themeDescWidth: "100%",
         themeDescBottom: 600,
-        themeVidLeft:-1000
+        themeVidLeft:0
       });
     } else {
       this.setState({
@@ -530,7 +530,7 @@ class Application extends React.Component {
         themeWidth: 0.75,
         themeDescWidth: "40%",
         themeDescBottom: 70,
-        themeVidLeft:1000
+        themeVidLeft: 1000
       });
     }
   }
@@ -586,7 +586,7 @@ class Application extends React.Component {
         themeWidth: 0.375,
         themeDescWidth: "100%",
         themeDescBottom: 600,
-        themeVidLeft:-1000
+        themeVidLeft: 0
       });
     } else {
       this.setState({
