@@ -710,7 +710,8 @@ class Application extends React.Component {
               position: "sticky",
               left: this.state.themeVidLeft,
               top: this.state.themeGap / 3,
-              zIndex: this.state.videoZindex1
+              zIndex: this.state.videoZindex1,
+              transition: "left 1s"
             }}
             height={this.state.videoDimX1 * this.state.videoHeight}
             width={this.state.videoDimX1 * this.state.videoWidth}
