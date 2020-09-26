@@ -717,7 +717,7 @@ class Application extends React.Component {
           width={1.1 * this.state.mapWidth}
           controls={true}
           playing={true}
-          config={{ vimeo: { playerOptions: { autoplay: true } } }}
+          config={{ vimeo: { playerOptions: { autoplay: 1 } } }}
         />
         {/*Theme 1*/}
         <div
