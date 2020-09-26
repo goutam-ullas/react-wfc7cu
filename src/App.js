@@ -707,17 +707,17 @@ class Application extends React.Component {
         <ReactPlayer
           className="video"
           style={{
-            margin:-50,
+            margin: -50,
             top: 0,
             left: 0,
             zIndex: 0
           }}
           url={this.theme0Video}
-          height={1.1*this.state.mapHeight}
-          width={1.1*this.state.mapWidth}
-          controls = {true}
+          height={1.1 * this.state.mapHeight}
+          width={1.1 * this.state.mapWidth}
+          controls={true}
           playing={true}
-          config={{vimeo:{playerOptions:{autoplay: true}}}}
+          config={{ vimeo: { playerOptions: { autoplay: true } } }}
         />
         {/*Theme 1*/}
         <div
