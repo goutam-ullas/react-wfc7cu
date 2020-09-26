@@ -715,6 +715,7 @@ class Application extends React.Component {
           url={this.theme0Video}
           height={1.1*this.state.mapHeight}
           width={1.1*this.state.mapWidth}
+          playing={true}
           controls={false}
         />
         {/*Theme 1*/}
