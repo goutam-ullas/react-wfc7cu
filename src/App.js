@@ -1,5 +1,6 @@
 /*imports*/
 import React, { useRef, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import {
   SliderInput,
   SliderTrack,
@@ -75,7 +76,7 @@ class Application extends React.Component {
       themeWidth: 0.75,
       themeDescWidth: "40%",
       themeDescBottom: 70,
-      themeVidLeft:1000,
+      themeVidLeft: 1000,
       video1play: false,
       video2play: false,
       video3play: false,
@@ -120,6 +121,7 @@ class Application extends React.Component {
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
   }
   /* Video URLs*/
+  theme0Video = "https://vimeo.com/462185422/197fb617ae";
   theme1Video = "https://vimeo.com/448631749/8c1e28fe46";
   theme2Video = "https://vimeo.com/448630508/11ec6d4d54";
   theme3Video = "https://vimeo.com/448632066/2ab228f98c";
@@ -143,8 +145,6 @@ class Application extends React.Component {
   /* Theme Position Variables*/
   circleState = 0;
   maxThemes = 8;
-  prevVideoState = 0;
-  VideoState = 0;
   /*On Mount*/
   componentDidMount() {
     /*Update Dimenstions based on screen size*/
@@ -418,9 +418,19 @@ class Application extends React.Component {
   }
 
   /*check if element in viewport */
-  elementInViewport(el) {
-    var top = el.offsetTop;
+  elementInViewport() {
+    /*const rect = this.video1Ref.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );*/
+    /* var top = el.offsetTop;
+    console.log(top);
     var height = el.offsetHeight;
+    console.log(height);
 
     while (el.offsetParent) {
       el = el.offsetParent;
@@ -430,7 +440,7 @@ class Application extends React.Component {
     return (
       top >= window.pageYOffset &&
       top + height <= window.pageYOffset + window.innerHeight
-    );
+    );*/
   }
 
   /* set circle state to current scroll position on scroll */
@@ -445,6 +455,7 @@ class Application extends React.Component {
     }
     if (this.elementInViewport(this.video1Ref) == false) {
       this.setState({ video1play: false });
+      console.log("v1 out");
     }
     if (this.elementInViewport(this.video2Ref) == false) {
       this.setState({ video2play: false });
@@ -522,12 +533,12 @@ class Application extends React.Component {
         themeWidth: 0.375,
         themeDescWidth: "100%",
         themeDescBottom: 600,
-        themeVidLeft:100
+        themeVidLeft: 100
       });
     } else {
       this.setState({
         aboutWidth: 0,
-        themeWidth: 0.750,
+        themeWidth: 0.75,
         themeDescWidth: "40%",
         themeDescBottom: 70,
         themeVidLeft: 1000
@@ -548,10 +559,24 @@ class Application extends React.Component {
       popUpPad: 0
     });
     if (this.state.aboutState == false) {
-      this.setState({ aboutWidth: 0, aboutState: true });
+      this.setState({
+        aboutWidth: 0,
+        aboutState: true,
+        themeWidth: 0.75,
+        themeDescWidth: "40%",
+        themeDescBottom: 70,
+        themeVidLeft: 1000
+      });
     }
     if (this.state.researchState == false) {
-      this.setState({ researchWidth: 0, researchState: true });
+      this.setState({
+        researchWidth: 0,
+        researchState: true,
+        themeWidth: 0.75,
+        themeDescWidth: "40%",
+        themeDescBottom: 70,
+        themeVidLeft: 1000
+      });
     }
     if (this.state.legendState == true) {
       this.setState({ legendHeight: window.innerHeight / 5 });
@@ -595,7 +620,7 @@ class Application extends React.Component {
         themeWidth: 0.75,
         themeDescWidth: "40%",
         themeDescBottom: 70,
-        themeVidLeft:1000
+        themeVidLeft: 1000
       });
     }
   }
@@ -678,6 +703,20 @@ class Application extends React.Component {
             width: this.state.mapWidth
           }}
         />
+        {/*Theme 0*/}
+        <ReactPlayer
+          className="video"
+          style={{
+            margin:-50,
+            top: 0,
+            left: 0,
+            zIndex: 0
+          }}
+          url={this.theme6Video}
+          height={1.1*this.state.mapHeight}
+          width={1.1*this.state.mapWidth}
+          controls={false}
+        />
         {/*Theme 1*/}
         <div
           style={{
@@ -685,8 +724,8 @@ class Application extends React.Component {
             top: 1.47 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -706,7 +745,7 @@ class Application extends React.Component {
           {/*Theme 1 Video*/}
           <ReactPlayer
             className="video"
-            ref={this.video1Ref}
+            ref={el => (this.video1Ref = el)}
             style={{
               top: this.state.themeGap / 3,
               zIndex: this.state.videoZindex1,
@@ -740,8 +779,8 @@ class Application extends React.Component {
             top: 3 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -791,8 +830,8 @@ class Application extends React.Component {
             top: 4.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -842,8 +881,8 @@ class Application extends React.Component {
             top: 6 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -855,7 +894,7 @@ class Application extends React.Component {
               zIndex: 5,
               width: this.state.themeDescWidth,
               bottom: this.state.themeDescBottom,
-              transition: "width 1s, bottom 1s"              
+              transition: "width 1s, bottom 1s"
             }}
           >
             <text className="themeDesc">{this.theme2Desc}</text>
@@ -893,8 +932,8 @@ class Application extends React.Component {
             top: 7.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -944,8 +983,8 @@ class Application extends React.Component {
             top: 9 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -995,8 +1034,8 @@ class Application extends React.Component {
             top: 10.5 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
@@ -1046,8 +1085,8 @@ class Application extends React.Component {
             top: 12 * this.state.themeGap,
             height: (3 * this.state.themeGap) / 4,
             pointerEvents: "none",
-            left: window.innerWidth*this.state.themeWidth / 6,
-            width: (this.state.themeWidth * window.innerWidth),
+            left: (window.innerWidth * this.state.themeWidth) / 6,
+            width: this.state.themeWidth * window.innerWidth,
             transition: "width 1s, left 1s"
           }}
         >
