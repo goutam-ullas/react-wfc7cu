@@ -106,10 +106,10 @@ class Application extends React.Component {
     this.sliderChange = this.sliderChange.bind(this);
     this.updateDimensions = this.updateDimensions.bind(this);
     this.setCircleState = this.setCircleState.bind(this);
-    this.elementInViewport = this.elementInViewport.bind(this);
     /*Text Variables*/
     this.aboutText =
       "Goods, Gods and Goddesses alternates performances with moments of their making. In portraying the market, Begum Bazar, and the many goods, gods and goddesses that move this space, I am looking, seeking but also escaping what I’ve been rummaging. These are individual segments, fragments of a whole, a whole I may never conceive. Because the thing is, in the telling of the various parts that will build this whole, I’m left with impressions of acts about acts, of scripted acts and scripting acts, of directing in the Bazar and being directed by the Bazar, of watching people perform with intermittent awareness of my own performance. Here, bodies become, a bride, a mother, a devotee, a woman. Stores advertise wholesale deals, actors play multiple parts, wholesale roles. It is a patch of land, but a theatre, with rehearsals, scripts and episodic memories keeping gender desirable, as imagined by some, exacted and ordered, with its outlines defined, insides determined, and borders enforced.";
+    this.theme0Desc = "The opening act set in the market scene, outside of the stores with their own smaller acts, is the longest one. It starts at about 10 AM, when the first actors, men, all playing storekeepers gradually enter the scene with women following after. About an hour before noon, the set is full, with all actors, occupying their respective positions. Smaller acts include men and women crossing streets, with women walking past stores in groups. Some actors are to walk with stage directions from google reviews. Others are to act from memory and the nostalgia of a previous act. The vital, perhaps the most challenging part is to co-ordinate the whole scene while the traffic moves as usual along the jagged lanes. The actors, the stores, the space, the traffic, the honking, all merge together, composing, enacting and reenacting. Each corner of the market concentrates on recreating different moments through different acts.";
     this.theme1Title = "This is Theme 1";
     this.theme1Desc =
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
@@ -145,6 +145,7 @@ class Application extends React.Component {
   /* Theme Position Variables*/
   circleState = 0;
   maxThemes = 8;
+  prevScrollPos = 0;
   /*On Mount*/
   componentDidMount() {
     /*Update Dimenstions based on screen size*/
@@ -417,67 +418,20 @@ class Application extends React.Component {
     window.addEventListener("scroll", this.setCircleState);
   }
 
-  /*check if element in viewport */
-  elementInViewport() {
-    /*const rect = this.video1Ref.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );*/
-    /* var top = el.offsetTop;
-    console.log(top);
-    var height = el.offsetHeight;
-    console.log(height);
-
-    while (el.offsetParent) {
-      el = el.offsetParent;
-      top += el.offsetTop;
-    }
-
-    return (
-      top >= window.pageYOffset &&
-      top + height <= window.pageYOffset + window.innerHeight
-    );*/
-  }
-
   /* set circle state to current scroll position on scroll */
   setCircleState() {
     var i = 8;
     var currentScrollPos = window.pageYOffset;
+    if((currentScrollPos>this.prevScrollPos)&&(currentScrollPos < this.state.themeGap*1.505)){
+      window.scrollTo(0,this.state.themeGap*1.505);
+    }
     for (i = 8; i > -1; i--) {
       if (currentScrollPos >= this.state.themeGap * i * 1.48) {
         this.circleState = i;
         break;
       }
     }
-    if (this.elementInViewport(this.video1Ref) == false) {
-      this.setState({ video1play: false });
-      console.log("v1 out");
-    }
-    if (this.elementInViewport(this.video2Ref) == false) {
-      this.setState({ video2play: false });
-    }
-    if (this.elementInViewport(this.video3Ref) == false) {
-      this.setState({ video3play: false });
-    }
-    if (this.elementInViewport(this.video4Ref) == false) {
-      this.setState({ video4play: false });
-    }
-    if (this.elementInViewport(this.video5Ref) == false) {
-      this.setState({ video5play: false });
-    }
-    if (this.elementInViewport(this.video6Ref) == false) {
-      this.setState({ video6play: false });
-    }
-    if (this.elementInViewport(this.video7Ref) == false) {
-      this.setState({ video7play: false });
-    }
-    if (this.elementInViewport(this.video8Ref) == false) {
-      this.setState({ video8play: false });
-    }
+    this.prevScrollPos = currentScrollPos;
   }
 
   /*When clicked on Home Button*/
@@ -698,7 +652,7 @@ class Application extends React.Component {
             margin: -50,
             top: 0,
             left: 0,
-            zIndex:0
+            zIndex: 0
           }}
           url={this.theme0Video}
           height={1.1 * this.state.mapHeight}
@@ -710,6 +664,19 @@ class Application extends React.Component {
             }
           }}
         />
+        {/*Theme 0 Description*/}
+        <div
+          style={{
+            padding: 20,
+            position: "absolute",
+            zIndex: 1,
+            width: 500,
+            top: 300,
+            left: 200
+          }}
+        >
+          <text className="themeDesc">{this.theme0Desc}</text>
+        </div>
         {/*Map Div*/}
         <div
           ref={el => (this.mapContainer = el)}
@@ -720,7 +687,7 @@ class Application extends React.Component {
             top: 0,
             height: this.state.mapHeight,
             width: this.state.mapWidth,
-            backgroundColor: 'transparent'
+            backgroundColor: "transparent"
           }}
         />
         {/*Theme 1*/}
