@@ -691,6 +691,25 @@ class Application extends React.Component {
     return (
       /*Main Div*/
       <div>
+        {/*Theme 0*/}
+        <ReactPlayer
+          className="video"
+          style={{
+            margin: -50,
+            top: 0,
+            left: 0,
+            zIndex:0
+          }}
+          url={this.theme0Video}
+          height={1.1 * this.state.mapHeight}
+          width={1.1 * this.state.mapWidth}
+          controls={true}
+          config={{
+            vimeo: {
+              playerOptions: { background: 1 }
+            }
+          }}
+        />
         {/*Map Div*/}
         <div
           ref={el => (this.mapContainer = el)}
@@ -700,24 +719,9 @@ class Application extends React.Component {
             right: 0,
             top: 0,
             height: this.state.mapHeight,
-            width: this.state.mapWidth
+            width: this.state.mapWidth,
+            backgroundColor: 'transparent'
           }}
-        />
-        {/*Theme 0*/}
-        <ReactPlayer
-          className="video"
-          style={{
-            margin: -50,
-            top: 0,
-            left: 0,
-            zIndex: 0
-          }}
-          url={this.theme0Video}
-          height={1.1 * this.state.mapHeight}
-          width={1.1 * this.state.mapWidth}
-          controls={true}
-          playing={true}
-          config={{ vimeo: { playerOptions: { autoplay: "true" } } }}
         />
         {/*Theme 1*/}
         <div
