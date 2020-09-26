@@ -121,7 +121,7 @@ class Application extends React.Component {
       "This thesis looks at an urban market, Begum Bazar situated in the old city of Hyderabad and its relation to gender. The work, initially set out to explore kitchen objects and their place in shaping one’s life, eventually becomes an exploration into how, space and gender narratives co-exist and help sustain each other. By using the example of this market situated in a major metropolitan Indian city, and through interviews of people occupying and visiting the space, the work speculates on how social hierarchies and practices gain ground.";
   }
   /* Video URLs*/
-  theme0Video = "https://vimeo.com/462185422/197fb617ae";
+  theme0Video = "https://player.vimeo.com/video/462185422";
   theme1Video = "https://vimeo.com/448631749/8c1e28fe46";
   theme2Video = "https://vimeo.com/448630508/11ec6d4d54";
   theme3Video = "https://vimeo.com/448632066/2ab228f98c";
