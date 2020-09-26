@@ -712,7 +712,7 @@ class Application extends React.Component {
             left: 0,
             zIndex: 0
           }}
-          url={this.theme6Video}
+          url={this.theme0Video}
           height={1.1*this.state.mapHeight}
           width={1.1*this.state.mapWidth}
           controls={false}
